@@ -1,1 +1,1 @@
-# fullsatackopen-phonebook-backend
+# fullstackopen-phonebook-backend

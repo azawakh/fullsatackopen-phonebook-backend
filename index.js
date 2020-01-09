@@ -54,10 +54,7 @@ app.post("/api/people", (request, response) => {
     return response.status(400).json({ error: "content missing" });
   }
 
-  const personId = Math.floor(
-    Math.random() *
-      1000000000000000000000000000000000000000000000000000000000000000000000000000000000001
-  );
+  const personId = Math.floor(Math.random() * 1000000000000000000001);
 
   const person = {
     id: personId,
@@ -78,7 +75,7 @@ app.get("/info", (request, response) => {
   );
 });
 
-const PORT = 3001;
+const PORT = 7001;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });

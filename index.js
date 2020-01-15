@@ -54,6 +54,10 @@ app.post("/api/people", (request, response) => {
     return response.status(400).json({ error: "content missing" });
   }
 
+  if (people.some(person => person.name === name)) {
+    return response.status(400).json({ error: "name must be unique" });
+  }
+
   const personId = Math.floor(Math.random() * 1000000000000000000001);
 
   const person = {
